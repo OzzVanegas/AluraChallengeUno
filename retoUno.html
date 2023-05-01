@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>ENCRIPTADOR </title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css"> 
+	</head>
+	<body>
+		<header>            
+			<div class="titulo">                    
+				<h2>ENCRIPTADOR</h2>
+			</div>  
+		</header>        
+			
+		<main>
+			<section class="seccioningreso">
+				<label for="texto"></label>
+				<input type="text" id="texto" name="texto" class="inputingreso" required placeholder="Ingresa el Texto que deseas encriptar" onchange="convertirMinusculas()">
+				
+				<button onclick="encriptar()" class="botonera">
+				<h3>Encriptar</h3>		
+				<button>
+
+				<button onclick="desencriptar()" class="botonera">
+				<h4>Desencriptar</h4>                                
+				<button>
+				
+				<button onclick="copiar()"class="botonera">
+				<h5>Copiar</h5>
+				</button>
+				
+				<button class="botonera" onclick="location.reload()">
+					<h5>Reiniciar</h5>
+				</button>
+			</section>		
+			
+			<section class="seccionsalida">
+				<label for="resultado"></label>		
+				<input type="text" id="resultado" name=resultado class="inputsalida" placeholder="No hemos encontrado ningún mensaje aún.">
+				</section>
+			</main>
+		<footer 		
+			<p class="copyright"> &copy Develop by: oscarj1256@gmail.com 2023</p>
+		</footer>
+	</body>
+</html>
+
+<script>
+function encriptar() {
+	var texto = document.getElementById("texto").value;
+	var resultado = texto.replace(/a/g, "ai").replace(/e/g, "enter").replace(/i/g, "imes").replace(/o/g, "ober").replace(/u/g, "ufat");
+	document.getElementById("resultado").value = resultado;
+}
+
+function desencriptar() {
+	var texto = document.getElementById("texto").value;
+	var resultado = texto.replace(/ai/g, "a").replace(/enter/g, "e").replace(/imes/g, "i").replace(/ober/g, "o").replace(/ufat/g, "u");
+	document.getElementById("resultado").value = resultado;
+}
+function copiar() {
+	var resultado = document.getElementById("resultado");
+	var texto = document.getElementById("texto");
+	resultado.select();
+	document.execCommand("copy");
+	texto.value = resultado.value;
+	resultado.value = "";
+	document.getElementById("encriptar").disabled = true;
+	document.getElementById("desencriptar").disabled = false;
+}
+function convertirMinusculas() {
+	var textoInput = document.getElementById("texto").value;
+	var textoMinusculas = textoInput.toLowerCase();
+	document.getElementById("texto").value = textoMinusculas;
+}
+
+</script>
+
+

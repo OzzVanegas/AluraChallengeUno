@@ -1,0 +1,74 @@
+body{
+    background-color: lightgray;
+}
+.titulo{
+    width: 540px;
+    position: relative;
+    margin: 0 auto;
+    color: rgb(28, 102, 148);
+    font-size: 2em; 
+    }
+.seccioningreso{
+    margin: 0 50px;
+    width: 65%;
+    text-align: center;
+    display:inline-block;
+    overflow-y: auto;
+}
+.seccionsalida{
+    width: 25%;
+    display:inline-block;
+    vertical-align: top;
+    overflow-y: auto;
+}  
+.inputingreso{
+        font-size:xx-large;
+        text-align: center;
+        text-size-adjust: auto;
+        display: block;        
+        width: 90%;
+        height: 300px;        
+        padding: 10px 25px;
+        overflow-y: auto;
+        border: 3px solid rgb(30, 122, 122);
+        border-radius: 27px;
+    }
+.inputsalida{
+        font-size:large;
+        display: block;  
+        font-weight: bold;      
+        width: 80%;
+        height: 300px;    
+        padding: 10px 25px;
+        border: 3px solid rgb(30, 122, 122);
+        border-radius: 27px;   
+        overflow-y: auto;
+}
+
+.piedepagina{
+    text-align: center;
+}
+
+.botonera{   
+    background-color: #2E86C1; 
+    width: 200px;
+    margin:  10px 10px 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1em; 
+    font-weight: bold;
+	cursor: pointer;   
+}
+.botonera:hover{
+    background-color: #1E5092;
+    color: white;
+    font-size: 1.1em; 
+    border-color: aqua;
+
+}
+.copyright{
+    margin: 20px;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+}
